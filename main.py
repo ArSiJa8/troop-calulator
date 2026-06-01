@@ -9,7 +9,7 @@ TroopsTotal = int(Troops * Amount)
 #Supplies
 Fuil = int(input(f"Wieviele Liter Treibstoff benötigt EIN {Fahrzeugtyp} (nur Nummer):"))
 Food = int(input(f"Wieviel Essen benötigt EIN Mann täglich (In Kilogramm, nur Zahl):"))
-Medicine = float(input(f"Wieviel Kilogramm Medizin benötigt ein Mann der besatzung des {Fahrzeugtyp} täglich (Auch Dezimalzahlen möglich, z.B. 0.3)"))
+Medicine = float(input(f"Wieviel Kilogramm Medizin benötigt ein Mann der besatzung des {Fahrzeugtyp} täglich (Auch Dezimalzahlen möglich, z.B. 0.3):"))
 
 Food1 = int(Troops * Food)
 Medicine1 = float(Troops * Medicine)
