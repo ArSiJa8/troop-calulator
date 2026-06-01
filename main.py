@@ -1,1 +1,1 @@
-Fahrzeugtyp = input(Für welchen Fahrzeugtyp möchtest du die Supplies berechenen?:)
+Fahrzeugtyp = input("Für welchen Fahrzeugtyp möchtest du die Supplies berechenen?:")
