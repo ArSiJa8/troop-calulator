@@ -22,6 +22,6 @@ MedicineTotal = float(Amount * Medicine1)
 
 
 #Output
-print(f"Für {Amount} {Fahrzeugtyp} welcher je {Troops} Läute Besatzung benötigt brauchst du {TroopsTotal} truppen.")
+print(f"Für {Amount} {Fahrzeugtyp} welche je {Troops} Läute Besatzung benötigt brauchst du {TroopsTotal} truppen.")
 print(f"Ein {Fahrzeugtyp} mit Besatzung benötigt also täglich {Fuil}l Treibstoff, {Food1}kg Essen und {Medicine1}kg Medizin.")
 print(f"Das sind also für alle {Amount} {Fahrzeugtyp} zusammen {FuilTotal}l Treibstoff, {FoodTotal}kg Essen und {MedicineTotal}kg Medizin Täglich.")
