@@ -1,15 +1,15 @@
-#General
-Fahrzeugtyp = input("Für welchen Fahrzeugtyp möchtest du die Supplies berechenen?:")
-Amount = int(input(f"Wieviele des Fahrzeugtyps {Fahrzeugtyp} brauchst du?:"))
+# General
+Fahrzeugtyp = input("Fahrzeugtyp für Logistikberechnung eingeben (z.B. SPz Marder): ")
+Amount = int(input(f"Anzahl der Einheiten vom Typ [{Fahrzeugtyp}] im Verband: "))
 
-#Troops
-Troops = int(input(f"Wieviel besatzung benötigt 1 {Fahrzeugtyp}?:"))
+# Troops
+Troops = int(input(f"Soll-Stärke der Besatzung pro {Fahrzeugtyp} (Anzahl Soldaten): "))
 TroopsTotal = int(Troops * Amount)
 
-#Supplies
-Fuil = int(input(f"Wieviele Liter Treibstoff benötigt EIN {Fahrzeugtyp} (nur Nummer):"))
-Food = int(input(f"Wieviel Essen benötigt EIN Mann täglich (In Kilogramm, nur Zahl):"))
-Medicine = float(input(f"Wieviel Kilogramm Medizin benötigt ein Mann der besatzung des {Fahrzeugtyp} täglich (Auch Dezimalzahlen möglich, z.B. 0.3):"))
+# Supplies
+Fuil = int(input(f"Treibstoffverbrauch pro {Fahrzeugtyp} (in Litern, nur Zahl): "))
+Food = int(input(f"Verpflegungssatz pro Soldat/Tag (in kg, nur Zahl): "))
+Medicine = float(input(f"Sanitätsmaterial-Bedarf pro Soldat/Tag (in kg, Dezimalpunkt möglich): "))
 
 Food1 = int(Troops * Food)
 Medicine1 = float(Troops * Medicine)
@@ -19,9 +19,20 @@ FoodTotal = int(Amount * Food1)
 MedicineTotal = float(Amount * Medicine1)
 
 
-
-
-#Output
-print(f"Für {Amount} {Fahrzeugtyp} welche je {Troops} Läute Besatzung benötigt brauchst du {TroopsTotal} truppen.")
-print(f"Ein {Fahrzeugtyp} mit Besatzung benötigt also täglich {Fuil}l Treibstoff, {Food1}kg Essen und {Medicine1}kg Medizin.")
-print(f"Das sind also für alle {Amount} {Fahrzeugtyp} zusammen {FuilTotal}l Treibstoff, {FoodTotal}kg Essen und {MedicineTotal}kg Medizin Täglich.")
+# Output
+print("\n" + "="*50)
+print("LOGISTISCHER LAGEBERICHT / BEDARFSBERECHNUNG")
+print("="*50)
+print(f"Einsatzverband: {Amount}x {Fahrzeugtyp}")
+print(f"Gesamt-Personalsollstärke: {TroopsTotal} Soldaten (Besatzung: {Troops} Mann pro System).")
+print("-"*50)
+print(f"Tagesverbrauch Einzelsystem [{Fahrzeugtyp}]:")
+print(f" -> Betriebsstoffe (POL): {Fuil}l")
+print(f" -> Verpflegung (Vpf): {Food1}kg")
+print(f" -> Sanitätsmaterial (SanMat): {Medicine1:.2f}kg")
+print("-"*50)
+print(f"Gesamtbedarf des Verbandes (pro 24 Stunden):")
+print(f" -> POL-Gesamt: {FuilTotal}l Treibstoff")
+print(f" -> Vpf-Gesamt: {FoodTotal}kg Verpflegung")
+print(f" -> SanMat-Gesamt: {MedicineTotal:.2f}kg Sanitätsmaterial")
+print("="*50)
